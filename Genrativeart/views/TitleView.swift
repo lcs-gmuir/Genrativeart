@@ -7,23 +7,32 @@
 
 import SwiftUI
 
+enum Coin: Int {
+    case heads = 1
+    case tails = 2
     
+    static func flip() -> Coin {
+        let decision = Bool.random()
+        
+        if decision == true {
+            return .heads
+        } else {
+            return .tails
+        }
+    }
+    
+}
+
     
 
 struct TitleView: View {
+    let flipOne = Coin.flip()
     var body: some View {
-        
-        triangleToRight()
-            .aspectRatio(1.0, contentMode: .fit)
-        triangleBottomLeft()
-            .aspectRatio(1.0, contentMode: .fit)
-        triangleTopLeft()
-            .aspectRatio(1.0, contentMode: .fit)
-        triangleToRight()
-        .aspectRatio(1.0, contentMode: .fit)
-        triangleBottomRight()
-            .aspectRatio(1.0, contentMode: .fit)
-    
+        ZStack {
+            if flipOne == .heads {
+                
+            }
+        }
     }
      
 }
