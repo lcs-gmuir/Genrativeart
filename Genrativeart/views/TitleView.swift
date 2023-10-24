@@ -7,12 +7,25 @@
 
 import SwiftUI
 
+    
+    
+
 struct TitleView: View {
     var body: some View {
-        Rectangle()
+        
+        triangleToRight()
+            .aspectRatio(1.0, contentMode: .fit)
+        triangleBottomLeft()
+            .aspectRatio(1.0, contentMode: .fit)
+        triangleTopLeft()
+            .aspectRatio(1.0, contentMode: .fit)
+        triangleToRight()
         .aspectRatio(1.0, contentMode: .fit)
-        .foregroundColor(.white)
+        triangleBottomRight()
+            .aspectRatio(1.0, contentMode: .fit)
+    
     }
+     
 }
 
 #Preview {
