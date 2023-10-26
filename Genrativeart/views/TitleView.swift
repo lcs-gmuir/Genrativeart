@@ -46,19 +46,23 @@ struct TitleView: View {
         ZStack {
             if flipOne == .heads {
                 triangleTopLeft()
-                    .fill(colorOne)
+                    .fill(flipTwo == .heads ? colorOne: .clear)
+                    .stroke(.black)
        .aspectRatio(1.0, contentMode: .fit)
                 triangleBottomRight()
-                    .fill(colorTwo)
+                    .fill(flipTwo == .tails ? colorOne: .clear )
+                    .stroke(.black)
                     .aspectRatio(1.0, contentMode: .fit)
               
             } else {
                 triangleTopRight()
-                    .fill(colorTwo)
+                    .fill(flipTwo == .tails ? colorOne: .clear )
+                    .stroke(.black)
                     .aspectRatio(1.0, contentMode: .fit)
                  
                 triangleBottomLeft()
-                    .fill(colorOne)
+                    .fill(flipTwo == .heads ? colorOne: .clear)
+                    .stroke(.black)
                     .aspectRatio(1.0, contentMode: .fit)
             }
         }
