@@ -35,18 +35,12 @@ struct TitleView: View {
     let flipForColor = Coin.flip()
     
 // set colors
+    
     var colorOne: Color {
-        if flipForColor == .heads {
-            return markerOne
-        } else {
-            return markerTwo
-        }
+        return flipForColor == .heads ? markerOne : markerTwo
     }
     var colorTwo: Color {
-        if flipForColor == .heads {
-            return markerTwo
-        }
-        return markerOne
+        return flipForColor == .heads ? markerTwo : markerOne
     }
     var body: some View {
         ZStack {
@@ -60,9 +54,11 @@ struct TitleView: View {
               
             } else {
                 triangleTopRight()
+                    .fill(colorTwo)
                     .aspectRatio(1.0, contentMode: .fit)
-                    .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                 
                 triangleBottomLeft()
+                    .fill(colorOne)
                     .aspectRatio(1.0, contentMode: .fit)
             }
         }
