@@ -26,23 +26,23 @@ enum Coin: Int {
     
 
 struct TitleView: View {
-    let flipOne = Coin.flip()
-    let flipTwo = Coin.flip()
+    let flipOne = Coin.tails
+    let flipTwo = Coin.tails
     let markerOne = Color.blue
     let markerTwo = Color.red
-    let flipThree = Coin.heads
+    let flipThree = Coin.tails
     
     // decide the colours
-    let flipForColor = Coin.flip()
+    let flipForColor = Coin.heads
     
-// set colors
-    
+    // set colors
     var colorOne: Color {
         return flipForColor == .tails ? markerOne : markerTwo
     }
     var colorTwo: Color {
-        return flipForColor == .heads ? markerTwo : markerOne
+        return flipForColor == .heads ? markerOne : markerTwo
     }
+    
     // determine the fil color for the other triangle
     var remainingTrianlgeFillColor: Color {
         return flipThree == .heads ? markerOne : .clear
@@ -62,7 +62,7 @@ struct TitleView: View {
               
             } else {
                 triangleTopRight()
-                    .fill(flipTwo == .tails ? colorOne: remainingTrianlgeFillColor )
+                    .fill(flipTwo == .tails ? colorOne: remainingTrianlgeFillColor)
                     .stroke(.black)
                     .aspectRatio(1.0, contentMode: .fit)
                  
