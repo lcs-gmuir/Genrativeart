@@ -30,6 +30,7 @@ struct TitleView: View {
     let flipTwo = Coin.flip()
     let markerOne = Color.blue
     let markerTwo = Color.red
+    let flipThree = Coin.heads
     
     // decide the colours
     let flipForColor = Coin.flip()
@@ -37,31 +38,36 @@ struct TitleView: View {
 // set colors
     
     var colorOne: Color {
-        return flipForColor == .heads ? markerOne : markerTwo
+        return flipForColor == .tails ? markerOne : markerTwo
     }
     var colorTwo: Color {
         return flipForColor == .heads ? markerTwo : markerOne
     }
+    // determine the fil color for the other triangle
+    var remainingTrianlgeFillColor: Color {
+        return flipThree == .heads ? markerOne : .clear
+    }
     var body: some View {
+
         ZStack {
             if flipOne == .heads {
                 triangleTopLeft()
-                    .fill(flipTwo == .heads ? colorOne: .clear)
+                    .fill(flipTwo == .heads ? colorOne: remainingTrianlgeFillColor)
                     .stroke(.black)
        .aspectRatio(1.0, contentMode: .fit)
                 triangleBottomRight()
-                    .fill(flipTwo == .tails ? colorOne: .clear )
+                    .fill(flipTwo == .tails ? colorOne: remainingTrianlgeFillColor )
                     .stroke(.black)
                     .aspectRatio(1.0, contentMode: .fit)
               
             } else {
                 triangleTopRight()
-                    .fill(flipTwo == .tails ? colorOne: .clear )
+                    .fill(flipTwo == .tails ? colorOne: remainingTrianlgeFillColor )
                     .stroke(.black)
                     .aspectRatio(1.0, contentMode: .fit)
                  
                 triangleBottomLeft()
-                    .fill(flipTwo == .heads ? colorOne: .clear)
+                    .fill(flipTwo == .heads ? colorOne: remainingTrianlgeFillColor)
                     .stroke(.black)
                     .aspectRatio(1.0, contentMode: .fit)
             }
