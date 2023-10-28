@@ -15,6 +15,7 @@
 		C2AD2F9A2AE81A81003D0879 /* GenrativeartUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AD2F992AE81A81003D0879 /* GenrativeartUITestsLaunchTests.swift */; };
 		C2AD2FA82AE81D3A003D0879 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AD2FA72AE81D3A003D0879 /* TitleView.swift */; };
 		C2AD2FAB2AE82638003D0879 /* shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AD2FAA2AE82638003D0879 /* shape.swift */; };
+		C2E9AA872AED484A00CE8EC0 /* gridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E9AA862AED484A00CE8EC0 /* gridView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		C2AD2F992AE81A81003D0879 /* GenrativeartUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenrativeartUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C2AD2FA72AE81D3A003D0879 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		C2AD2FAA2AE82638003D0879 /* shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shape.swift; sourceTree = "<group>"; };
+		C2E9AA862AED484A00CE8EC0 /* gridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		C2AD2F7A2AE81A7A003D0879 /* Genrativeart */ = {
 			isa = PBXGroup;
 			children = (
+				C2AD2F7B2AE81A7A003D0879 /* GenrativeartApp.swift */,
 				C2AD2FA92AE825E9003D0879 /* helpers */,
 				C2AD2FA62AE81CE2003D0879 /* views */,
 				C2AD2F7F2AE81A80003D0879 /* Assets.xcassets */,
@@ -134,8 +137,8 @@
 		C2AD2FA62AE81CE2003D0879 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				C2AD2F7B2AE81A7A003D0879 /* GenrativeartApp.swift */,
 				C2AD2FA72AE81D3A003D0879 /* TitleView.swift */,
+				C2E9AA862AED484A00CE8EC0 /* gridView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			files = (
 				C2AD2F7C2AE81A7A003D0879 /* GenrativeartApp.swift in Sources */,
 				C2AD2FA82AE81D3A003D0879 /* TitleView.swift in Sources */,
+				C2E9AA872AED484A00CE8EC0 /* gridView.swift in Sources */,
 				C2AD2FAB2AE82638003D0879 /* shape.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

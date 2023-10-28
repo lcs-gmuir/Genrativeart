@@ -26,14 +26,14 @@ enum Coin: Int {
     
 
 struct TitleView: View {
-    let flipOne = Coin.tails
-    let flipTwo = Coin.tails
+    let flipOne = Coin.flip()
+    let flipTwo = Coin.flip()
     let markerOne = Color.blue
     let markerTwo = Color.red
-    let flipThree = Coin.tails
+    let flipThree = Coin.flip()
     
     // decide the colours
-    let flipForColor = Coin.heads
+    let flipForColor = Coin.flip()
     
     // set colors
     var colorOne: Color {
