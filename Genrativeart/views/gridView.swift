@@ -10,23 +10,17 @@ import SwiftUI
 struct gridView: View {
     var body: some View {
 Grid(horizontalSpacing: 0, verticalSpacing: 0){
-            GridRow {
-                ForEach(1..<4){i in
-                    TitleView()
-                }
-             
-                
+    
+    
+    ForEach(1..<4) { j in
+        GridRow {
+            ForEach(1..<4){i in
+                TitleView()
             }
-    GridRow{
-        ForEach(1..<4){i in
-            TitleView()
         }
     }
-    GridRow {
-        ForEach(1..<4){i in
-            TitleView()
-        }
-    }
+
+  
         }
     }
 }
