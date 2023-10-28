@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct gridView: View {
+    @State var rows = 4.0
+    @State var columns = 4
+    
+
     var body: some View {
 Grid(horizontalSpacing: 0, verticalSpacing: 0){
     
-    
-    ForEach(1..<4) { j in
+    ForEach(0..<rows, id: \.self) { j in
         GridRow {
-            ForEach(1..<4){i in
+            ForEach(0..<columns, id: \.self){i in
                 TitleView()
             }
         }
@@ -22,6 +25,8 @@ Grid(horizontalSpacing: 0, verticalSpacing: 0){
 
   
         }
+Slider(value: $columns, in: 0...100, step: 1.0)
+        
     }
 }
 
